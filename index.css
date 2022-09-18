@@ -1,0 +1,246 @@
+@import url();
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  background-image: url("./images/background site.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+.logo img {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.2);
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.nav h1 {
+  color: white;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav h1:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(to bottom, #04989e, #75d45e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 38px #75d45e, 0 0 73px #75d45e, 0 0 80px #75d45e,
+    0 0 94px #75d45e, 0 0 140px #75d45e;
+}
+
+#inicio {
+  background-image: linear-gradient(to bottom, #04989e, #75d45e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 38px #75d45e, 0 0 73px #75d45e, 0 0 80px #75d45e,
+    0 0 94px #75d45e, 0 0 140px #75d45e;
+}
+
+.welcome img {
+  margin-top: 100px;
+  margin-left: 50px;
+  height: 250px;
+}
+
+.textwelcome h2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  margin-top: -150px;
+  margin-left: 120px;
+}
+
+.scanner h1 {
+  color: transparent;
+  font-size: 60px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 430px;
+  margin-top: -65px;
+}
+
+.scanner h1::before {
+  content: "HexaDev";
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 4px solid #065e00;
+  background-image: linear-gradient(to bottom, #04989e, #75d45e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  color: #065e00;
+  animation: load91371 5s linear infinite;
+}
+
+@keyframes load91371 {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    border-right-color: transparent;
+  }
+
+  11%,
+  21%,
+  31%,
+  41%,
+  51%,
+  61%,
+  71%,
+  81%,
+  91% {
+    border-right-color: #065e00;
+  }
+
+  60%,
+  80% {
+    width: 28%;
+  }
+}
+
+/* From uiverse.io by @mrhyddenn */
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  margin-left: 80px;
+  margin-top: 150px;
+}
+
+.shadow__btn {
+  background: linear-gradient(to bottom, #04989e, #75d45e);
+  box-shadow: 0 0 25px #065e00;
+  border: 1px solid #0e4d09;
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px #065e00, 0 0 25px #065e00, 0 0 50px #065e00,
+    0 0 100px #065e00;
+}
+/* From uiverse.io by @Codewithvinay */
+.box {
+  position: relative;
+  width: 1120px;
+  height: 200px;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  transition: 0.5s;
+  z-index: 1;
+  top: 20;
+  margin-top: -400px;
+  margin-left: 160px;
+}
+
+.box span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.box span::before {
+  top: -40px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+}
+
+.box span:after {
+  bottom: -40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+}
+
+.box .content {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .content img {
+  height: 300px;
+}
+
+.box .content h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
