@@ -75,6 +75,7 @@ body {
   margin-top: 100px;
   margin-left: 50px;
   height: 250px;
+  filter: drop-shadow(0 0 0.4rem rgb(0, 255, 195));
 }
 
 .textwelcome h2 {
@@ -83,6 +84,7 @@ body {
   font-size: 45px;
   margin-top: -150px;
   margin-left: 120px;
+  position: relative;
 }
 
 .scanner h1 {
