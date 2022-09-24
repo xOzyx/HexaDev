@@ -4,6 +4,28 @@
   user-select: none;
 }
 
+/* Scrollbar */
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #065e00 black;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0fa304;
+  border-radius: 1rem;
+  border: 3px solid black;
+}
+
 body {
   background-image: url("./images/background site.png");
   background-repeat: no-repeat;
@@ -11,22 +33,22 @@ body {
 }
 
 .header {
-  position: relative;
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 100%;
+  /*position: fixed;
+  margin-top: -100px;*/
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 6rem;
+  height: 6rem;
 }
 
 .logo img {
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 100px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 6rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -37,14 +59,13 @@ body {
 }
 
 .nav {
-  position: relative;
   display: flex;
   justify-content: end;
 }
 
 .nav h1 {
   color: white;
-  margin-top: 20px;
+  margin-top: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   margin-left: 50px;
@@ -71,11 +92,15 @@ body {
     0 0 94px #75d45e, 0 0 140px #75d45e;
 }
 
+/*.welcome {
+  margin-top: 100px;
+}*/
+
 .welcome img {
   margin-top: 100px;
   margin-left: 50px;
   height: 250px;
-  filter: drop-shadow(0 0 0.4rem rgb(0, 255, 195));
+  filter: drop-shadow(0 0 0.6rem rgb(0, 255, 195));
 }
 
 .textwelcome h2 {
@@ -194,6 +219,7 @@ body {
   top: 20;
   margin-top: -400px;
   margin-left: 160px;
+  transition: 0.3s;
 }
 
 .box span {
@@ -226,7 +252,7 @@ body {
 .box .content {
   position: relative;
   width: 450px;
-  height: 300px;
+  height: 350px;
   padding: 20px 40px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -238,13 +264,56 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
 }
 .box .content img {
   height: 300px;
+  filter: drop-shadow(0 0 1rem #0f7907);
+  transition: 0.3s;
 }
 
 .box .content h2 {
   font-size: 20px;
   color: #fff;
   margin-bottom: 10px;
+}
+
+.box .content:hover{
+  transform: scale(1.1);
+}
+
+.box .content img:hover{
+  filter: drop-shadow(0 0 2rem #0dca00);
+}
+
+.sobre {
+  background-color: #22b264;
+  background-image: linear-gradient(180deg, #22b264 0%, #7dff7f 100%);
+  height: 40rem;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sobre h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  top: 40px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.sobre h2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.sobre svg {
+   top: 3.5rem;
+   position: relative;
+   
 }
