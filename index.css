@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -287,8 +288,9 @@ body {
 }
 
 .sobre {
-  background-color: #22b264;
-  background-image: linear-gradient(180deg, #22b264 0%, #7dff7f 100%);
+
+  background-color: #00ffb3;
+  background-image: linear-gradient(180deg, #00ffb3 0%, #5eac79 36%, #0b8353 61%);
   height: 40rem;
   margin-top: 300px;
   display: flex;
@@ -296,24 +298,89 @@ body {
   justify-content: center;
   align-items: center;
 }
+/* From uiverse.io by @G4b413l */
+.card {
+  width: 35rem;
+  height: 20rem;
+  transition: all 0.2s;
+  position: relative;
+  top: 17%;
+  right: 27rem;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#00ffe5, #0eff4e);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 1.5s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(15px);
+  }
+}
 .sobre h1 {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
-  top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  width: 34%;
+  position: relative;
+  right: 25rem;
+  top: -20%;
   margin-left: 20px;
   margin-bottom: 30px;
+  
 }
-.sobre h2 {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
-  top: 30px;
-  margin-left: 20px;
-  margin-bottom: 30px;
+.custom-shape-divider-top-1664070044 {
+  position: absolute;
+  top: 40.5rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
-.sobre svg {
-   top: 3.5rem;
-   position: relative;
-   
+
+.custom-shape-divider-top-1664070044 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 72px;
+  opacity: 85%;
+}
+
+.custom-shape-divider-top-1664070044 .shape-fill {
+  fill: #FFFFFF;
 }
