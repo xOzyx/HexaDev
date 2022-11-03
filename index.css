@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Wancho&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -27,18 +28,26 @@
   border: 3px solid black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url("./images/background site.png");
+  background-image: url("./images/bg site.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-.header {
+header {
+  width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
-  /*position: fixed;
-  margin-top: -100px;*/
+  font-family: 'Noto Sans Wancho', sans-serif;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 2;
+  box-shadow: 0px 2px 4px #005c14;
 }
 
 .logo {
@@ -49,7 +58,7 @@ body {
 .logo img {
   margin-top: 1rem;
   margin-left: 1rem;
-  width: 6rem;
+  width: 4rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -59,22 +68,29 @@ body {
   filter: drop-shadow(0 0 1rem rgb(0, 255, 195));
 }
 
-.nav {
+nav ul{
   display: flex;
   justify-content: end;
 }
 
-.nav h1 {
+a{
+  text-decoration: none;
   color: white;
-  margin-top: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  margin-left: 50px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.nav h1:hover {
+nav h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-right: 25px;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+nav h1:hover {
   transform: scale(1.1);
   background-image: linear-gradient(to bottom, #04989e, #75d45e);
   background-clip: text;
@@ -84,42 +100,49 @@ body {
     0 0 94px #75d45e, 0 0 140px #75d45e;
 }
 
-#inicio {
+.inicio {
   background-image: linear-gradient(to bottom, #04989e, #75d45e);
   background-clip: text;
   -webkit-background-clip: text;
+  font-size: 20px;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 38px #75d45e, 0 0 73px #75d45e, 0 0 80px #75d45e,
     0 0 94px #75d45e, 0 0 140px #75d45e;
 }
 
-/*.welcome {
-  margin-top: 100px;
-}*/
+#inicio {
+  margin-bottom: 200px;
+  height: 365px;
 
-.welcome img {
+}
+
+#inicio img {
   margin-top: 100px;
-  margin-left: 50px;
+  margin-left: 100px;
   height: 250px;
-  filter: drop-shadow(0 0 0.6rem rgb(0, 255, 195));
+  filter: drop-shadow(0 0 0.6rem rgb(0, 163, 125));
+  top: 5rem;
+  position: relative;
 }
 
 .textwelcome h2 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 45px;
+  font-size: 36px;
   margin-top: -150px;
-  margin-left: 120px;
+  margin-left: 140px;
   position: relative;
+  top: 5rem;
 }
 
 .scanner h1 {
   color: transparent;
-  font-size: 60px;
+  font-size: 45px;
   position: relative;
   overflow: hidden;
-  margin-left: 430px;
-  margin-top: -65px;
+  margin-left: 400px;
+  margin-top: -50px;
+  top: 5rem;
 }
 
 .scanner h1::before {
@@ -174,39 +197,10 @@ body {
 
   60%,
   80% {
-    width: 28%;
+    width: 20%;
   }
 }
 
-/* From uiverse.io by @mrhyddenn */
-.shadow__btn {
-  padding: 10px 20px;
-  border: none;
-  font-size: 17px;
-  color: #fff;
-  border-radius: 7px;
-  letter-spacing: 4px;
-  cursor: pointer;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: 0.5s;
-  transition-property: box-shadow;
-  margin-left: 80px;
-  margin-top: 150px;
-}
-
-.shadow__btn {
-  background: linear-gradient(to bottom, #04989e, #75d45e);
-  box-shadow: 0 0 25px #065e00;
-  border: 1px solid #0e4d09;
-  transition: 0.3s;
-}
-
-.shadow__btn:hover {
-  box-shadow: 0 0 5px #065e00, 0 0 25px #065e00, 0 0 50px #065e00,
-    0 0 100px #065e00;
-  transform: scale(1.1);
-}
 /* From uiverse.io by @Codewithvinay */
 .box {
   position: relative;
@@ -252,8 +246,8 @@ body {
 
 .box .content {
   position: relative;
-  width: 450px;
-  height: 350px;
+  width: 25rem;
+  height: 18rem;
   padding: 20px 40px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -266,9 +260,10 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  top: -1rem;
 }
 .box .content img {
-  height: 300px;
+  height: 15rem;
   filter: drop-shadow(0 0 1rem #0f7907);
   transition: 0.3s;
 }
@@ -283,22 +278,89 @@ body {
   transform: scale(1.1);
 }
 
-.box .content img:hover{
+.box .content:hover{
   filter: drop-shadow(0 0 2rem #0dca00);
 }
 
-.sobre {
+.scroll {
+  height: 1920px;
+  background: linear-gradient( #000000 2%, #014600 27.16%, #005c14 50.35%, #00833b 74.98%, #00914b 97.19%);
+}
 
-  background-color: #00ffb3;
-  background-image: linear-gradient(180deg, #00ffb3 0%, #5eac79 36%, #0b8353 61%);
-  height: 40rem;
-  margin-top: 300px;
+.waves1 {
+  top: -6rem;
+  width: 100%;
+  height: 200%;
+  opacity: 30%;
+  position: relative;
+}
+
+.waves2 {
+  width: 100%;
+  top: -39rem;
+  position: relative;
+  opacity: 30%;
+}
+
+.waves3 {
+  width: 100%;
+  position: relative;
+  opacity: 30%;
+}
+
+#sobre {
+  padding-top: 6rem;
+  margin-top: 295px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
-/* From uiverse.io by @G4b413l */
+
+.logosobre {
+  left: -25rem;
+  top: -9em;
+  filter: drop-shadow(0 0 0.4rem rgb(13, 159, 125));
+  position: relative;
+}
+
+#sobre h1{
+  left: 12rem;
+  top: -35rem;
+  color: white;
+  font-family: 'Noto Sans Wancho', sans-serif;
+  font-size: 45px;
+  position: relative;
+  filter: drop-shadow(0 0 0.1rem #ffffff);
+}
+
+span.hexadev {
+  background-image: linear-gradient(to bottom, #04989e, #75d45e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+span.nuture {
+  background-image: linear-gradient(to bottom, #04989e, #75d45e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#sobre p {
+  width: 700px;
+  left: 12rem;
+  top: -34rem;
+  color: white;
+  font-family: 'Noto Sans Wancho', sans-serif;
+  font-size: 35px;
+  position: relative;
+  text-align:center;
+  
+}
+
+/* From uiverse.io by @vaitefude */
 .card {
   width: 35rem;
   height: 20rem;
@@ -352,21 +414,10 @@ body {
     transform: translateY(15px);
   }
 }
-.sobre h1 {
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  width: 34%;
-  position: relative;
-  right: 25rem;
-  top: -20%;
-  margin-left: 20px;
-  margin-bottom: 30px;
-  
-}
+
 .custom-shape-divider-top-1664070044 {
   position: absolute;
-  top: 40.5rem;
+  top: 40.9rem;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -379,8 +430,33 @@ body {
   width: calc(100% + 1.3px);
   height: 72px;
   opacity: 85%;
+  top: 0.6rem;
 }
 
-.custom-shape-divider-top-1664070044 .shape-fill {
-  fill: #FFFFFF;
+button{
+  background-color: transparent;
+	border: 2px solid #0f7907;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 30px;
+	transition: .4s;
+  margin-right: 25px;
+}
+
+button:hover{
+	background-color:#0f7907;
+  border: 2px solid transparent;
+	cursor: pointer;
+  filter: drop-shadow(0 0 1rem #0f7907);
+}
+
+#devs {
+  padding-top: 6rem;
+  margin-top: -50rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
